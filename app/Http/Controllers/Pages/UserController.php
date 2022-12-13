@@ -61,7 +61,7 @@ class UserController extends Controller
             $user->date_of_birth=   $request->date_of_birth;
             $user->save();
 
-            return response()->json(['message'=>'user successfully updated!','user_info'=>$user],200);
+            return response()->json(['message'=>'user updated!','user_info'=>$user],200);
         } catch (\Throwable $th) {
             return response()->json(['message'=>'Something went wrong! '],500);
         }
