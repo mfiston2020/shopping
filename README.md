@@ -1,12 +1,14 @@
 
 ## About Shopping app
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+this is a place where a buyer and a seller meets and share money and items depending on one another!
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+this is a way to go ahead and use the project after cloning
+
+- [composer install] which is going to download all the dependencies
+- [cp .env.example .env] this copies information from .env.example into .env
+- [php artisan key:generate] this generate a key for the application
+
+after all of those you configure your database and do 
+
+- php artisan migrate
