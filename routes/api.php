@@ -30,5 +30,6 @@ Route::post('/saveCountry',[CountryController::class,'saveCountry']);
 
 Route::post('/saveUser',[UserController::class,'saveUser']);
 Route::get('/showUsers',[UserController::class,'showUsers']);
+Route::post('/updateUser',[UserController::class,'updateUser']);
 Route::get('/showUser/{id}',[UserController::class,'showUser']);
 Route::delete('/delete/User/{id}',[UserController::class,'deleteUser']);

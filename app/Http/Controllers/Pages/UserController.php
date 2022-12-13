@@ -43,6 +43,30 @@ class UserController extends Controller
         }
     }
 
+    function updateUser(Request $request,$id){
+        $this->validate($request,[
+            'country_name'=>'required',
+            'full_name'=>'required|max:100',
+            'email'=>'required|email|unique:users,email',
+            'gender'=>'required',
+            'date_of_birth'=>'required|date',
+        ]);
+
+        try {
+            $user   =   User::findOrFail($id);
+            $user->country_code =  $request->country_name;
+            $user->full_name    =   $request->full_name;
+            $user->email        =   $request->email;
+            $user->gender       =   $request->gender;
+            $user->date_of_birth=   $request->date_of_birth;
+            $user->save();
+
+            return response()->json(['message'=>'user successfully updated!','user_info'=>$user],200);
+        } catch (\Throwable $th) {
+            return response()->json(['message'=>'Something went wrong! '],500);
+        }
+    }
+
     function deleteUser($id)
     {
         try {
