@@ -27,4 +27,7 @@ class CountryController extends Controller
 
         return response()->json(['message'=>'country created successfully!'],200);
     }
+    function getCountry(){
+        
+    }
 }
