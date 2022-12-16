@@ -8,6 +8,7 @@
 </head>
 <body>
 <center>
+    <h2>Listing Countries</h2>
     <select name="country_name">
         @foreach ($countries as $country)
 
