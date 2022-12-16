@@ -11,7 +11,7 @@ class CountryController extends Controller
     function showCountries(){
         $countries  =   Country::all();
         $count_countries      =   count($countries);
-        return response()->json(['number_of_countries'=>$count_countries,'countries'=>$countries],200);
+        return response()->json(['number_of_country'=>$count_countries,'countries'=>$countries],200);
     }
 
     function saveCountry(Request $request){
