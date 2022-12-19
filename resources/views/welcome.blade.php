@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+<h1> laravel project</h1>
 <center>
     <select name="country_name">
         @foreach ($countries as $country)
