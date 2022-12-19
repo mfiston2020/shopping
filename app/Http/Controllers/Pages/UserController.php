@@ -34,7 +34,7 @@ class UserController extends Controller
                 'full_name'=>$request->full_name,
                 'email'=>$request->email,
                 'gender'=>$request->gender,
-                'date_of_birth'=>$request->date_of_birth,
+                'date_of_birth'=>date('Y-m-d',strtotime($request->date_of_birth)),
             ]);
 
             return response()->json(['message'=>'user successfully created!','user_info'=>$User],200);
