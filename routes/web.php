@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Country;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,7 @@ Route::get('/', function () {
     return view('welcome',compact('countries'));
     return 'welcome to shopping app';
 });
+
+Route::get('migrate',function(){
+    Artisan::call('migrate');
+ });

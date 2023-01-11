@@ -20,8 +20,10 @@ class AuthController extends Controller
         if (!$user) {
             return response()->json(['message'=>"User Not Found"],200);
         }
+        return Hash::check($request->password,$user->password);
 
-        if($user && Hash::check($request->password,$user->password)){
+        if($user && Hash::check($request->password,$user->password))
+        {
             // $user->createToken($request->email)->plainTextToken;
             $token = $user->createToken($request->email)->plainTextToken;
             return response()->json([
@@ -32,6 +34,5 @@ class AuthController extends Controller
         else{
             return response()->json(['message'=>'invalid credentials'],200);
         }
-
     }
 }
